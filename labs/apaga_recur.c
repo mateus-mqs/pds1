@@ -12,7 +12,12 @@ void apaga(char *string, char c){
         return;
     }
     if(string[0] == c){
-        string[0] = &string[1];
+        int i = 0;
+        while(string[i] != 0){
+            string[i] = string[i+1];
+            i++;
+        }
+        apaga(&string[0], c);
     }
     apaga(&string[1], c);
 }
