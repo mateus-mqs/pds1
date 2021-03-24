@@ -56,5 +56,5 @@ void main(){
         scanf("%s %s", nome, asc);
         buscaPessoa(buscaPessoa(&pessoaMaster, asc, 0, 0), nome, 0, 1);
     }
-    //free(&pessoaMaster);
+    free(pessoaMaster.filhos);
 }
